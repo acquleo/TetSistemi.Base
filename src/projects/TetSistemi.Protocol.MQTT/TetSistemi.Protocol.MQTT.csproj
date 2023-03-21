@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <BaseOutputPath>..\..\..\artifacts\$(MSBuildProjectName)</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MQTTnet" Version="4.1.4.563" />
+    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="4.1.4.563" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TetSistemi.Base\TetSistemi.Base.csproj" />
+  </ItemGroup>
+
+</Project>

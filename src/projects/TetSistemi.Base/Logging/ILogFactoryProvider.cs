@@ -7,7 +7,7 @@ using TetSistemi.Base.Logger;
 namespace TetSistemi.Base.Logging
 {
     /// <summary>
-    /// ILogFactoryProvider interface
+    /// ILogFactoryProvider interface.
     /// </summary>
     public interface ILogFactoryProvider
     {

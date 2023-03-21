@@ -1,0 +1,29 @@
+﻿ICCS.DataBroker.EventSource ChangeLog.txt
+
+***********************************************************************************************************
+Versione          1.0.1.2
+Data              18/10/2022
+Sviluppatore      acquleo
+
+- fixed query strin parameters di nuovo
+
+***********************************************************************************************************
+Versione          1.0.1.1
+Data              22/04/2022
+Sviluppatore      acquleo
+
+- fixed query strin parameters
+
+***********************************************************************************************************
+Versione          1.0.1.0
+Data              23/03/2022
+Sviluppatore      acquleo
+
+- added message deserialization guard
+
+***********************************************************************************************************
+Versione          1.0.0.0
+Data              15/02/2022
+Sviluppatore      acquleo
+
+- first release

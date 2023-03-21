@@ -1,0 +1,22 @@
+﻿TetSistemi.Protocol ChangeLog.txt
+
+***********************************************************************************************************
+Versione          1.0.2.0
+Data              13/01/2023
+Sviluppatore      acquleo
+
+- IMessageEnveloper generic
+
+***********************************************************************************************************
+Versione          1.0.1.0
+Data              10/01/2023
+Sviluppatore      acquleo
+
+- aggiunto vaire classi di test in memoria e il client mqtt con auto spawn di un server mqtt integrato
+
+***********************************************************************************************************
+Versione          1.0.0.0
+Data              16/12/2022
+Sviluppatore      acquleo
+
+- first release

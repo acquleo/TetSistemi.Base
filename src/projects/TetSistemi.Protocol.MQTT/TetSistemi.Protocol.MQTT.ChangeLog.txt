@@ -1,0 +1,9 @@
+﻿ICCS.DataBroker.MQTT ChangeLog.txt
+
+
+***********************************************************************************************************
+Versione          1.0.0.0
+Data              15/02/2022
+Sviluppatore      acquleo
+
+- first release
