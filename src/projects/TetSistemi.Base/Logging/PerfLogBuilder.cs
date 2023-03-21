@@ -57,6 +57,8 @@ namespace TetSistemi.Base.Logging.Nlog
         /// <returns></returns>
         public IPerfLogBuilder WithObject(object clientObject)
         {
+            if (clientObject is null) throw new ArgumentNullException("clientObject");
+
             return this.WithClass(clientObject.GetType());
         }
     }
