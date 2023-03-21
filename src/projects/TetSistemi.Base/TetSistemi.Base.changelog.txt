@@ -1,0 +1,8 @@
+﻿TetSistemi.Base ChangeLog.txt
+
+***********************************************************************************************************
+Versione          1.0.0.0
+Data              15/03/2023
+Sviluppatore      acquleo
+
+- first release
