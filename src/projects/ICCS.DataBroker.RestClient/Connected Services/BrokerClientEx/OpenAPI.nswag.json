@@ -1,0 +1,237 @@
+﻿{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ICCS.DataBroker",
+    "version": "v2"
+  },
+  "paths": {
+    "/mqtt/publish": {
+      "post": {
+        "tags": [
+          "mqtt"
+        ],
+        "summary": "Publish a message on the MQTT broker",
+        "operationId": "publish",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "qos",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "retain",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {}
+            },
+            "text/json": {
+              "schema": {}
+            },
+            "application/*+json": {
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mqtt/publishEx": {
+      "post": {
+        "tags": [
+          "mqtt"
+        ],
+        "summary": "Publish a message on the MQTT broker",
+        "operationId": "publishEx",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/data"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/data"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/data"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mqtt/status": {
+      "get": {
+        "tags": [
+          "mqtt"
+        ],
+        "summary": "Returns the MQTT broker connection status",
+        "operationId": "status",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/mqttstatus"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/mqttstatus"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/mqttstatus"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UserPropertyInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "data": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "topic": {
+            "type": "string",
+            "nullable": true
+          },
+          "qos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "retain": {
+            "type": "boolean"
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "responseTopic": {
+            "type": "string",
+            "nullable": true
+          },
+          "userPropertyInfo": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UserPropertyInfo"
+            }
+          },
+          "message": {
+            "nullable": true
+          }
+        }
+      },
+      "mqttstatus": {
+        "type": "object",
+        "description": "Mqtt client status",
+        "additionalProperties": false,
+        "properties": {
+          "clientid": {
+            "type": "string",
+            "description": "client identifier",
+            "nullable": true
+          },
+          "port": {
+            "type": "integer",
+            "description": "server port",
+            "format": "int32"
+          },
+          "host": {
+            "type": "string",
+            "description": "server host",
+            "nullable": true
+          },
+          "connected": {
+            "type": "boolean",
+            "description": "server connected"
+          }
+        }
+      }
+    }
+  }
+}

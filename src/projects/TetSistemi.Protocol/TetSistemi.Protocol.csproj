@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <BaseOutputPath>..\..\..\artifacts\$(MSBuildProjectName)</BaseOutputPath>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ICCS.DataBroker.EventSource\ICCS.DataBroker.EventSource.csproj" />
+    <ProjectReference Include="..\ICCS.DataBroker.RestClient\ICCS.DataBroker.RestClient.csproj" />
+    <ProjectReference Include="..\TetSistemi.Base\TetSistemi.Base.csproj" />
+    <ProjectReference Include="..\TetSistemi.Protocol.MQTT\TetSistemi.Protocol.MQTT.csproj" />
+  </ItemGroup>
+
+</Project>
