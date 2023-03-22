@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\projects\TetSistemi.Base\TetSistemi.Base.csproj" />
+    <PackageReference Include="TetSistemi.Base" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
