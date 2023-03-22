@@ -48,7 +48,14 @@ namespace TetSistemi.Base.IO
         {
             return System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         }
-
+        /// <summary>
+        /// Ritorna il path dell'assembly di esecuzione
+        /// </summary>
+        /// <returns>Ritorna la stringa con il path della directory corrente.</returns>
+        public static string GetTempDirectory()
+        {
+            return System.IO.Path.GetTempPath();
+        }
         #endregion
 
     }
